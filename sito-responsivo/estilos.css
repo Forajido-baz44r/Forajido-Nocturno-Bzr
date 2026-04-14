@@ -1,0 +1,158 @@
+/* VARIABLES DE MARCA: FORAJIDO NOCTURNO */
+:root {
+    --negro-profundo: #0D0D0D;
+    --gris-oscuro: #1A1A1A;
+    --rojo-sangre: #8B0000;
+    --verde-oliva: #3B3C23;
+    --oliva-brillante: #556B2F;
+    --texto-plata: #E0E0E0;
+    --fuente-gotica: 'UnifrakturMaguntia', serif;
+    --fuente-western: 'Rye', cursive;
+    --fuente-moderna: 'Pirata One', cursive;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--negro-profundo);
+    font-family: 'Inter', sans-serif;
+    color: var(--texto-plata);
+    line-height: 1.6;
+}
+
+#contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--gris-oscuro);
+    min-height: 100vh;
+}
+
+/* CABECERA */
+header {
+    background: #000;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--rojo-sangre);
+}
+
+header h1 a {
+    font-family: var(--fuente-gotica);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--rojo-sangre);
+    text-decoration: none;
+    text-shadow: 3px 3px 6px #000;
+}
+
+.subtitulo {
+    font-family: var(--fuente-western);
+    color: var(--oliva-brillante);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* NAVEGACIÓN (PRÁCTICA 6) */
+.navbar {
+    background: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--verde-oliva);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 1.2rem 1.5rem;
+    color: var(--oliva-brillante);
+    text-decoration: none;
+    font-family: var(--fuente-western);
+    font-size: 0.9rem;
+    transition: 0.4s ease;
+}
+
+.menu li a:hover {
+    background: var(--rojo-sangre);
+    color: #fff;
+}
+
+/* BOTÓN HAMBURGUESA MÓVIL */
+.icon {
+    display: none;
+    color: var(--oliva-brillante);
+    padding: 1.2rem;
+    font-family: var(--fuente-western);
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* RESPONSIVO: CELULARES */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Se oculta inicialmente */
+        flex-direction: column;
+        width: 100%;
+        background: #000;
+    }
+    .menu.active {
+        display: flex; /* Se muestra al hacer clic */
+    }
+    .icon {
+        display: block; /* Aparece el botón EL BAZAR */
+    }
+    .menu li {
+        border-bottom: 1px solid #222;
+    }
+}
+
+/* CATÁLOGO DE PRODUCTOS */
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 3rem 1.5rem;
+}
+
+.producto-card {
+    background: #111;
+    padding: 1.5rem;
+    border: 1px solid var(--verde-oliva);
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--rojo-sangre);
+    box-shadow: 0 10px 20px rgba(139, 0, 0, 0.2);
+}
+
+.producto-card img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.producto-card h2 {
+    font-family: var(--fuente-moderna);
+    color: var(--rojo-sangre);
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: var(--oliva-brillante);
+    text-align: center;
+    padding: 2.5rem;
+    font-family: var(--fuente-moderna);
+    border-top: 2px solid var(--rojo-sangre);
+}

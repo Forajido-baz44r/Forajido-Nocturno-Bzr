@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios | Forajido Nocturno</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Rye&family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div id="contenedor">
+    <header>
+        <h1><a href="index.html">Forajido Nocturno</a></h1>
+        <p class="subtitulo">Complementos del Desierto</p>
+    </header>
+    <nav class="navbar">
+        <div class="icon" onclick="toggleMenu()">&#9776; EL BAZAR</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="vestimenta.html">VESTIMENTA</a></li>
+            <li><a href="calzado.html">CALZADO</a></li>
+            <li><a href="accesorios.html">ACCESORIOS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <section class="catalogo-container">
+        <div class="producto-card">
+            <h2>Sombrero "Calamidad"</h2>
+            <img src="imagenes/sombrero.jpg" alt="Sombrero Calamidad">
+            <p>Fieltro rígido con banda de cuero y detalles en plata.</p>
+        </div>
+        <div class="producto-card">
+            <h2>Cinturón de Munición</h2>
+            <img src="imagenes/cinturon.jpg" alt="Cinturón Munición">
+            <p>Cuero tallado a mano con hebilla de latón envejecido.</p>
+        </div>
+        <div class="producto-card">
+            <h2>Pañuelo Sombrío</h2>
+            <img src="imagenes/panuelo.jpg" alt="Pañuelo Sombrío">
+            <p>Seda negra con grabados de iconografía western.</p>
+        </div>
+    </section>
+    <footer>© 2026 Forajido Nocturno</footer>
+</div>
+<script>
+    function toggleMenu() { document.getElementById("menu").classList.toggle("active"); }
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Forajido Nocturno</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Rye&family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .seccion-contacto { padding: 2rem; max-width: 700px; margin: 0 auto; text-align: center; }
+        .metodos-pago { margin-bottom: 2rem; padding: 1rem; border: 1px solid var(--verde-oliva); border-radius: 8px; }
+        
+        /* Estilos del Formulario */
+        .formulario-contacto { background: #111; padding: 2rem; border-radius: 8px; border: 1px solid var(--rojo-sangre); margin-top: 2rem; }
+        .campo { margin-bottom: 1.2rem; text-align: left; }
+        .campo label { display: block; color: var(--oliva-brillante); font-family: var(--fuente-western); margin-bottom: 5px; }
+        .campo input, .campo textarea { 
+            width: 100%; padding: 10px; background: #000; border: 1px solid var(--verde-oliva); color: white; border-radius: 4px; 
+        }
+        
+        /* Botones */
+        .btn-gmail { 
+            background: var(--rojo-sangre); color: white; border: none; padding: 12px 25px; 
+            font-family: var(--fuente-western); cursor: pointer; width: 100%; transition: 0.3s;
+        }
+        .btn-gmail:hover { background: #b30000; transform: scale(1.02); }
+        
+        .btn-whatsapp { 
+            display: inline-block; background: #25D366; color: black; padding: 12px 25px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; margin-top: 15px;
+        }
+        .btn-whatsapp:hover { background: #1ebe57; }
+    </style>
+</head>
+<body>
+<div id="contenedor">
+    <header>
+        <h1><a href="index.html">Forajido Nocturno</a></h1>
+        <p class="subtitulo">Órdenes y Mensajería</p>
+    </header>
+    <nav class="navbar">
+        <div class="icon" onclick="toggleMenu()">&#9776; EL BAZAR</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="vestimenta.html">VESTIMENTA</a></li>
+            <li><a href="calzado.html">CALZADO</a></li>
+            <li><a href="accesorios.html">ACCESORIOS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <section class="seccion-contacto">
+        <div class="metodos-pago">
+            <h2 style="font-family: var(--fuente-moderna); color: var(--rojo-sangre);">Vía Rápida</h2>
+            <p>Atención personalizada por WhatsApp para pedidos urgentes:</p>
+            <a href="https://wa.me/525639684930?text=Hola%20Forajido%20Nocturno,%20deseo%20realizar%20un%20pedido." class="btn-whatsapp" target="_blank">
+                📱 Enviar WhatsApp
+            </a>
+        </div>
+
+        <div class="formulario-contacto">
+            <h2 style="font-family: var(--fuente-moderna); margin-bottom: 1rem;">Pedido por Correo</h2>
+            <form action="mailto:forajidonocturnobzar@gmail.com" method="post" enctype="text/plain">
+                <div class="campo">
+                    <label>Nombre del Cliente</label>
+                    <input type="text" name="Nombre" placeholder="Tu nombre o alias..." required>
+                </div>
+                <div class="campo">
+                    <label>Artículo solicitado</label>
+                    <input type="text" name="Producto" placeholder="Ej. Chaqueta Desierto..." required>
+                </div>
+                <div class="campo">
+                    <label>Detalles (Talla, Color, Dirección)</label>
+                    <textarea name="Mensaje" rows="4" placeholder="Escribe aquí los detalles de tu compra..." required></textarea>
+                </div>
+                <button type="submit" class="btn-gmail">Enviar pedido a GMAIL</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>© 2026 Forajido Nocturno | Estilo Sin Ley</footer>
+</div>
+<script>
+    function toggleMenu() { document.getElementById("menu").classList.toggle("active"); }
+</script>
+</body>
+</html>

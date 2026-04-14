@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forajido Nocturno | Inicio</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Rye&family=Pirata+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<div id="contenedor">
+    <header>
+        <h1><a href="index.html">Forajido Nocturno</a></h1>
+        <p class="subtitulo">Estilo Alternativo & Vibra Vaquera</p>
+    </header>
+    <nav class="navbar">
+        <div class="icon" onclick="toggleMenu()">&#9776; EL BAZAR</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="vestimenta.html">VESTIMENTA</a></li>
+            <li><a href="calzado.html">CALZADO</a></li>
+            <li><a href="accesorios.html">ACCESORIOS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+    <section style="padding: 4rem 2rem; text-align: center;">
+        <h2 style="font-family: var(--fuente-gotica); font-size: 2.8rem; color: var(--rojo-sangre);">Indumentaria de la Frontera Oscura</h2>
+        <p style="max-width: 600px; margin: 20px auto; font-size: 1.1rem;">Bienvenido al refugio de los que caminan bajo la luna. Aquí la rudeza del viejo oeste se encuentra con la elegancia prohibida.</p>
+    </section>
+    <footer>© 2026 Forajido Nocturno | Estilo Sin Ley</footer>
+</div>
+<script>
+    function toggleMenu() { document.getElementById("menu").classList.toggle("active"); }
+</script>
+</body>
+</html>
